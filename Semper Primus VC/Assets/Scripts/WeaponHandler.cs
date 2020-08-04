@@ -139,6 +139,7 @@ public class WeaponHandler : MonoBehaviour
         {
             if (Input.GetButton("R2") && Time.time > nextFire)
             {
+                Debug.Log("shooooot");
                 shoot();
                 
             }
