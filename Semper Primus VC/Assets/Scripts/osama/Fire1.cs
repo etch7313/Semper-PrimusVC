@@ -20,9 +20,9 @@ public class Fire1 : MonoBehaviour
     float Nextfire=0;
     [HideInInspector] public int TempInfo=0;
 
-    
-   
-    
+
+
+    public GameObject bulletPrefab;
     public GameObject cubeFire;
 
     // Start is called before the first frame update
@@ -95,7 +95,7 @@ public class Fire1 : MonoBehaviour
             {
                 if (NoOfBullets[Profile] > 0)
                 {
-                    ObjectPooler.Instance.SpawnFromPool("Glock", cubeFire.transform.position, cubeFire.transform.rotation);
+                    Instantiate(bulletPrefab, cubeFire.transform.position, cubeFire.transform.rotation);
                     NoOfBullets[Profile]--;
                     
                     //GetInfo();
@@ -107,8 +107,8 @@ public class Fire1 : MonoBehaviour
             {
                 if (NoOfBullets[Profile] > 0)
                 {
-                    ObjectPooler.Instance.SpawnFromPool("ak47", cubeFire.transform.position, cubeFire.transform.rotation);
-                    NoOfBullets[Profile]--;
+                        Instantiate(bulletPrefab, cubeFire.transform.position, cubeFire.transform.rotation);
+                        NoOfBullets[Profile]--;
                     akSound.Play();
                     // GetInfo();
                 }
@@ -119,8 +119,8 @@ public class Fire1 : MonoBehaviour
             {
                 if (NoOfBullets[Profile] > 0)
                 {
-                    ObjectPooler.Instance.SpawnFromPool("m4", cubeFire.transform.position, cubeFire.transform.rotation);
-                    NoOfBullets[Profile]--;
+                        Instantiate(bulletPrefab, cubeFire.transform.position, cubeFire.transform.rotation);
+                        NoOfBullets[Profile]--;
                     m4Sound.Play();
                     //GetInfo();
                 }
@@ -131,8 +131,8 @@ public class Fire1 : MonoBehaviour
             {
                 if (NoOfBullets[Profile] > 0)
                 {
-                    ObjectPooler.Instance.SpawnFromPool("deagle", cubeFire.transform.position, cubeFire.transform.rotation);
-                    NoOfBullets[Profile]--;
+                        Instantiate(bulletPrefab, cubeFire.transform.position, cubeFire.transform.rotation);
+                        NoOfBullets[Profile]--;
                     //GetInfo();
                 }
 
