@@ -44,7 +44,8 @@ public class SRWeaponSwitcher : MonoBehaviour
         {
             weaponChecker();
         }
-        
+       
+
     }
 
     void weaponChecker()
@@ -56,6 +57,7 @@ public class SRWeaponSwitcher : MonoBehaviour
 
             if (hit.transform.name == "ak")
             {
+                Debug.Log("AK47");
                 Ak47();
             }
             else if (hit.transform.name == "M4Final")

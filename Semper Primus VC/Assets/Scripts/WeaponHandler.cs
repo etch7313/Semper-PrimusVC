@@ -27,7 +27,8 @@ public class WeaponHandler : MonoBehaviour
 
     [Header("Bullet Settings")]
     [SerializeField] private GameObject bulletPreFab;
-    
+   public Transform rp;
+    Vector3 target;
     [SerializeField] private float bulletLifeTime=2f;
      private float bulletMag;
     private float bulletMagHolder;
@@ -223,7 +224,8 @@ public class WeaponHandler : MonoBehaviour
                 m4ReloadAnimation.SetBool("reload",false);
                 m4MF.Play();
                 m4Sound.Play();
-                Instantiate(bulletPreFab, m4SpwanPoint.transform.position, m4SpwanPoint.transform.rotation);
+                target = transform.GetComponent<Camera>().ScreenToWorldPoint(rp.position);
+                Instantiate(bulletPreFab, target, m4SpwanPoint.transform.rotation);
                 nextFire = Time.time + fireRate;
                 UpdatingHud(M4Hud, bulletMag, numOfMags*30);
                 bulletMag--;
@@ -276,7 +278,7 @@ public class WeaponHandler : MonoBehaviour
         {
             if (bulletMag > -1 && numOfMags > -1)
             {
-                Debug.Log(bulletMag);
+
                 glockReloadAnimation.SetBool("reload",false);           
                 glockMF.Play();
                 glockSound.Play();
