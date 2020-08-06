@@ -1,0 +1,28 @@
+﻿using System.Linq;
+using UnityEngine;
+using UnityEngine.AI;
+
+public class PlayerController : MonoBehaviour
+{
+
+
+
+    public NavMeshAgent agenty;
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                agenty.SetDestination(hit.point);
+                
+            }
+        }
+    }
+}
