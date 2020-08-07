@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class ImpactDetection : MonoBehaviour
 {
+    //this script used to detect the Surface that the bullet hit and play a sound accordingly
+
+    [Header("Audio Refrence")]
     [SerializeField] private AudioSource hitSound;
     private void OnCollisionEnter(Collision other)
     {

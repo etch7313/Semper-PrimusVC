@@ -7,13 +7,13 @@ using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject MenuCanvas;
-    [SerializeField]
-    private GameObject SettingsCanvas;
-    [SerializeField]
-    private AudioMixer audioMixer;
+    [Header("Audio Refrence")]
+    [SerializeField] private AudioMixer audioMixer;
 
+    [Header("GameObject Refrence")]
+
+    [SerializeField] private GameObject MenuCanvas;
+    [SerializeField] private GameObject SettingsCanvas;
     [SerializeField] GameObject settingsMenu;
     [SerializeField] GameObject mainMenu;
  

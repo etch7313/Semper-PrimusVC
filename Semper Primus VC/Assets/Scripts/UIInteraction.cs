@@ -5,22 +5,22 @@ using UnityEngine.UIElements;
 
 public class UIInteraction : MonoBehaviour
 {
-    public GameObject VROFFBUTTON;
-    [SerializeField] private Camera mainCamera;
+    [Header("GameObject Refrence")]
+
+            public GameObject VROFFBUTTON;
+
+    [Header("Camera Refrence")]
+
+            [SerializeField] private Camera mainCamera;
 
     public LayerMask floatinUI;
-    // Update is called once per frame
+    
     void Update()
     {
         if (Input.GetButtonDown("R1"))
         {
             ClickUI();
-        }
-        
-        
-        
-        
-        
+        }  
     }
 
     void ClickUI()

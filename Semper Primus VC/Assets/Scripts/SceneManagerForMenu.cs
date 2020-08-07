@@ -8,15 +8,15 @@ using UnityEngine.XR;
 
 public class SceneManagerForMenu : MonoBehaviour
 {
-    
+    [Header("Misc.")]
     public GameObject putVrHeadset;
     private AsyncOperation _Xscene;
+    [Header("Menu Refrence")]
     [SerializeField] GameObject mainMenu;
     [SerializeField] GameObject startMenu;
-    
     [SerializeField] GameObject chooseMap;
     
-   
+   [Header("Controls Image")]
     [SerializeField] private GameObject controlsImage;
     int x = 0;
 

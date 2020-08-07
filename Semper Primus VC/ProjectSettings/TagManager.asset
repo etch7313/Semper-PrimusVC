@@ -5,21 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
-  - RightArmRolCol
-  - LeftUpLegCol
-  - head
-  - RightUpLegCol
-  - LeftLegCol
-  - RightArmCol
-  - LeftFootCol
-  - LeftArmCol
-  - RightFootCol
-  - RightLegCol
-  - torso
   - floatinUI
   - weapons
   - Target
   - Enemy
+  - M4Bullet
+  - DeagleBullet
   layers:
   - Default
   - TransparentFX
@@ -32,7 +23,7 @@ TagManager:
   - weapons
   - floatinUI
   - enemy
-  - 
+  - player
   - 
   - 
   - 

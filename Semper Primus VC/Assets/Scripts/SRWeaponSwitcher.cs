@@ -16,6 +16,7 @@ public class SRWeaponSwitcher : MonoBehaviour
      smoke=5
      frag=6
      */
+    [Header("Gameobject Refrences")]
     [SerializeField] private GameObject _ak47;
     [SerializeField] private GameObject _m4;
     [SerializeField] private GameObject _glock;
@@ -24,7 +25,11 @@ public class SRWeaponSwitcher : MonoBehaviour
     [SerializeField] private GameObject _fragGrenade;
     [SerializeField] private GameObject _smokeGrendae;
     [SerializeField] private Camera mainCamera;
+    [Space]
+    [Header("Layer Refrence")]
     [SerializeField] private LayerMask weapons;
+    [Space]
+    [Header("Script Refrence")]
     public WeaponHandler WP;
 
     private void Awake()
