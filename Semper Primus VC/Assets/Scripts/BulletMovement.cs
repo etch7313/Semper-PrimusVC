@@ -5,13 +5,12 @@ using UnityEngine;
 
 public class BulletMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    [SerializeField]
-    private Rigidbody RB;
+    [Header("GameObject Refrence")]
+    [SerializeField] private Rigidbody RB;
+    [Header("Bullet Refrence")]
     public GameObject RP;
-    
-    [SerializeField]
-    private float Speed = 5000f;
+    [Header("Bullet Settings")]
+    [SerializeField] private float Speed = 5000f;
     
     public void Start()
     {

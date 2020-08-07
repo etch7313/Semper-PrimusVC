@@ -5,15 +5,14 @@ using UnityEngine;
 
 public class Grenade : MonoBehaviour
 {
-
+    [Header("Effect Refrence")]
     [SerializeField] private GameObject explosionEffect;
     public ParticleSystem effect;
-
+    [Header("Grenade Values")]
     [SerializeField] private float delay = 3f;
-
     [SerializeField] private float explosionForce = 10f;
-
     [SerializeField] private float radius = 10f;
+    [Header("Audio Refrence")]
     public AudioSource fragSound;
     
     // Start is called before the first frame update
